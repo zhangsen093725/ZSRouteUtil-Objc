@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
+#import "ZSRoute.h"
 
-@interface ZSViewController : UIViewController
+@interface ZSViewController : UIViewController<ZSURLRouteOutput>
 
 @end
