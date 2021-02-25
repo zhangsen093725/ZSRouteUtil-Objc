@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ZSRouteUtil-Objc'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ZSRouteUtil-Objc.'
+  s.summary          = '路由工具'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,13 +18,14 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+路由工具类
+1、URL路由
                        DESC
 
   s.homepage         = 'https://github.com/zhangsen093725/ZSRouteUtil-Objc'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'zhangsen093725' => '376019018@qq.com' }
+  s.author           = { 'Josh' => '376019018@qq.com' }
   s.source           = { :git => 'https://github.com/zhangsen093725/ZSRouteUtil-Objc.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -35,8 +36,4 @@ TODO: Add long description of the pod here.
   # s.resource_bundles = {
   #   'ZSRouteUtil-Objc' => ['ZSRouteUtil-Objc/Assets/*.png']
   # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

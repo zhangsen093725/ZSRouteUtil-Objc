@@ -1,0 +1,16 @@
+PODS:
+  - ZSRouteUtil-Objc (0.1.0)
+
+DEPENDENCIES:
+  - ZSRouteUtil-Objc (from `../`)
+
+EXTERNAL SOURCES:
+  ZSRouteUtil-Objc:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZSRouteUtil-Objc: 53585cfb543a6dd06ecfefa005ddb9346f81747a
+
+PODFILE CHECKSUM: d9dc26e0c64a573c732b00ba2ff9831ec412314a
+
+COCOAPODS: 1.9.3
