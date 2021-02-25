@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'ZSRouteUtil-Objc_Example' do
+  pod 'ZSRouteUtil-Objc', :path => '../'
+
+  target 'ZSRouteUtil-Objc_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
