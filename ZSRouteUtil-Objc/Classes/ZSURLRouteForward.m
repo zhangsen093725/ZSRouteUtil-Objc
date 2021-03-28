@@ -29,7 +29,7 @@
 
 - (void)setTarget:(Class)target {
     
-    Class superclass = target.superclass;
+    Class superclass = target;
     BOOL isKindOfClass = NO;
     
     while (superclass.superclass != nil)

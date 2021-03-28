@@ -317,7 +317,7 @@
         return nil;
     }
     
-    Class superclass = targetClass.superclass;
+    Class superclass = targetClass;
     BOOL isKindOfClass = NO;
     
     while (superclass.superclass != nil)
@@ -388,7 +388,7 @@
         return nil;
     }
     
-    Class superclass = targetClass.superclass;
+    Class superclass = targetClass;
     BOOL isKindOfClass = NO;
     
     while (superclass.superclass != nil)
