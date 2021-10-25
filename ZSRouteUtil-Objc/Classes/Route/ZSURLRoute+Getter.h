@@ -10,6 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface NSDictionary (Encoded)
+
+- (NSString *)zs_queryURLEncodedStringForURLRoute;
+
+@end
+
 @interface ZSURLRoute (Getter)
 
 /// 当前的 navigation controller

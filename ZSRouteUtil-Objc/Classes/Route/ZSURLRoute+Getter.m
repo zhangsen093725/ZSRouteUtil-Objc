@@ -9,7 +9,7 @@
 
 @implementation NSDictionary (Encoded)
 
-- (NSString *)zs_queryURLEncodedString {
+- (NSString *)zs_queryURLEncodedStringForURLRoute {
     
     NSMutableString *query = [NSMutableString string];
     
@@ -137,7 +137,7 @@
         [params removeObjectForKey:key];
     }
     
-    NSString *ignoreQuery = [[ignoreParams copy] zs_queryURLEncodedString];
+    NSString *ignoreQuery = [[ignoreParams copy] zs_queryURLEncodedStringForURLRoute];
     
     NSString *removeQueryRoute = [removeQueryLink stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
     
@@ -158,7 +158,13 @@
     ZSURLRouteResult *result = [ZSURLRouteResult new];
     
     result.originRoute = _route_;
-    result.route = [NSString stringWithFormat:@"%@?%@", removeQueryRoute, ignoreQuery];
+    result.route = removeQueryRoute;
+    
+    if (ignoreQuery.length > 0)
+    {
+        result.route = [NSString stringWithFormat:@"%@?%@", result.route, ignoreQuery];
+    }
+    
     result.ignoreQuery = ignoreQuery;
     result.params = params;
     
@@ -410,7 +416,7 @@
     
     id<ZSURLRouteOutput> targetView = [targetClass zs_didFinishRouteResult:result];
     
-    if ([targetView isKindOfClass:[UIViewController class]] == NO)
+    if ([targetView isKindOfClass:[UIView class]] == NO)
     {
         NSError *error = [NSError errorWithDomain:@"ty_didFinishRouteResult 返回对象类型错误" code:502 userInfo:@{NSLocalizedDescriptionKey : @"请在 zs_didFinishRouteResult 中返回 UIView 及其子类"}];
         [self zs_route:route didFail:error];
